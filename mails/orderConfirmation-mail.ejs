@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .email-contain {
+        background-color: rgb(4, 104, 255);
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      .email-body {
+        background-color: white;
+        padding: 24px;
+      }
+      .email-footer {
+        background-color: rgb(207, 209, 210);
+        padding: 15px;
+      }
+      .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table td,
+      table th {
+        border: none;
+        padding: 8px;
+        text-align: left;
+      }
+      table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-contain">
+        <h1>Order Confirmation</h1>
+      </div>
+      <div class="email-body">
+        <p>Hello <%= username %>,</p>
+        <p>Your order has been confirmed. Details are as follows:</p>
+        <table>
+          <tr>
+            <th>Course Name</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td><%= coursename %></td>
+            <td>$<%= price %></td>
+            <td><%= date %></td>
+            <td>1</td>
+          </tr>
+        </table>
+        <p>Thank you for your purchase!</p>
+      </div>
+      <footer class="email-footer">
+        If you have any questions and need support, don't hesitate to connect
+        with us at
+        <a href="mailto:ahmedmagdy2592002@gmail.com">support@eLearnHub</a>
+      </footer>
+    </div>
+  </body>
+</html>

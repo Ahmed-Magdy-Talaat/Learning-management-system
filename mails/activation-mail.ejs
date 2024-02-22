@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .email-contain {
+        background-color: rgb(4, 104, 255);
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      .email-body {
+        background-color: white;
+        padding: 24px;
+      }
+      .email-footer {
+        background-color: rgb(207, 209, 210);
+        padding: 15px;
+      }
+      .email-wrapper {
+        max-width: 600px; /* Corrected the typo in max-width property */
+        margin: 0 auto; /* Corrected the typo in margin property */
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-contain">
+        <h1>Welcome to EduMasters</h1>
+      </div>
+      <div class="body-container">
+        <p>Hello <%= user.name %>,</p>
+        <p>
+          Thank you for registering with eLearnHub. To activate your account,
+          please use the following activation code:
+        </p>
+        <h2><%= activationCode %></h2>
+        <p>
+          Please enter this code within the next 5 minutes or it will expire.
+        </p>
+      </div>
+      <footer class="email-footer">
+        If you have any questions and need support, don't hesitate to connect
+        with us at
+        <a href="mailto:ahmedmagdy2592002@gmail.com">support@eLearnHub</a>
+      </footer>
+    </div>
+  </body>
+</html>
